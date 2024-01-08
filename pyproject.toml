@@ -1,6 +1,6 @@
 [tool]
 [tool.poetry]
-name = "py-gdrive"
+name = "google-drive-wrapper"
 version = "0.2.2"
 homepage = "https://github.com/luiscberrocal/py-google-drive"
 description = "Skeleton project created by Cookiecutter PyPackage."

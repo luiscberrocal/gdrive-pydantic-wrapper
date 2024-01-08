@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "py-gdrive"
-version = "0.2.1"
+version = "0.2.2"
 homepage = "https://github.com/luiscberrocal/py-google-drive"
 description = "Skeleton project created by Cookiecutter PyPackage."
 authors = ["Luis C. Berrocal <luis.berrocal.1942@gmail.com>"]

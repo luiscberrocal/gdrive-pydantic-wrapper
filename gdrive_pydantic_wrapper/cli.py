@@ -1,4 +1,4 @@
-"""Console script for py_google_drive."""
+"""Console script for gdrive_pydantic_wrapper."""
 
 import click
 
@@ -6,8 +6,8 @@ import click
 @click.command()
 def main():
     """Main entrypoint."""
-    click.echo("py-google-drive")
-    click.echo("=" * len("py-google-drive"))
+    click.echo("gdrive-pydantic-wrapper")
+    click.echo("=" * len("gdrive-pydantic-wrapper"))
     click.echo("Skeleton project created by Cookiecutter PyPackage")
 
 

@@ -1,4 +1,4 @@
-sources = py_google_drive
+sources = gdrive_pydantic_wrapper
 
 .PHONY: test format lint unittest coverage pre-commit clean
 test: format lint unittest

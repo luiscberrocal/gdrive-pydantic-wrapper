@@ -1,1 +1,1 @@
-::: py_google_drive
+::: gdrive_pydantic_wrapper

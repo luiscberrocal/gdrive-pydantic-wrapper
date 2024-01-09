@@ -1,1 +1,1 @@
-"""Unit test package for py-google-drive."""
+"""Unit test package for gdrive-pydantic-wrapper."""

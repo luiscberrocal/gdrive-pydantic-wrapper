@@ -6,7 +6,7 @@ To install Py Google Drive, run this command in your
 terminal:
 
 ``` console
-$ pip install py-google-drive
+$ pip install gdrive-pydantic-wrapper
 ```
 
 This is the preferred method to install Py Google Drive, as it will always install the most recent stable release.
@@ -22,13 +22,13 @@ the [Github repo][].
 You can either clone the public repository:
 
 ``` console
-$ git clone git://github.com/luiscberrocal/py-google-drive
+$ git clone git://github.com/luiscberrocal/gdrive-pydantic-wrapper
 ```
 
 Or download the [tarball][]:
 
 ``` console
-$ curl -OJL https://github.com/luiscberrocal/py-google-drive/tarball/master
+$ curl -OJL https://github.com/luiscberrocal/gdrive-pydantic-wrapper/tarball/master
 ```
 
 Once you have a copy of the source, you can install it with:

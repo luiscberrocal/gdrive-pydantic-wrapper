@@ -1,7 +1,7 @@
 site_name: Py Google Drive
-site_url: https://luiscberrocal.github.io/py-google-drive
-repo_url: https://github.com/luiscberrocal/py-google-drive
-repo_name: luiscberrocal/py-google-drive
+site_url: https://luiscberrocal.github.io/gdrive-pydantic-wrapper
+repo_url: https://github.com/luiscberrocal/gdrive-pydantic-wrapper
+repo_name: luiscberrocal/gdrive-pydantic-wrapper
 #strict: true
 nav:
   - Home: index.md
@@ -51,7 +51,7 @@ plugins:
       lang: en
   - mkdocstrings:
       watch:
-        - py-google-drive
+        - gdrive-pydantic-wrapper
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -63,7 +63,7 @@ extra:
       link: https://github.com/luiscberrocal/cookiecutter-pypackage
       name: Facebook
     - icon: fontawesome/brands/github
-      link: https://github.com/luiscberrocal/py-google-drive
+      link: https://github.com/luiscberrocal/gdrive-pydantic-wrapper
       name: Github
     - icon: material/email
       link: "mailto:luis.berrocal.1942@gmail.com"

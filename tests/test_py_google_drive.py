@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-"""Tests for `py_google_drive` package."""
+"""Tests for `gdrive_pydantic_wrapper` package."""
 
 import pytest
 from click.testing import CliRunner
 
-from py_google_drive import cli
+from gdrive_pydantic_wrapper import cli
 
 
 @pytest.fixture

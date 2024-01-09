@@ -102,7 +102,7 @@ Before you submit a pull request, check that it meets these guidelines:
 ## Tips
 
 ```
-$ poetry run pytest tests/test_py_google_drive.py
+$ poetry run pytest tests/test_gdrive_pydantic_wrapper.py
 ```
 
 To run a subset of tests.

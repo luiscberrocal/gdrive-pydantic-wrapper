@@ -1,4 +1,4 @@
-"""Console script for py_google_drive."""
+"""Console script for gdrive_pydantic_wrapper."""
 
 import click
 

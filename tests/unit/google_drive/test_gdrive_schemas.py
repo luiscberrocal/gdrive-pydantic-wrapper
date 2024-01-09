@@ -3,7 +3,7 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
-from py_google_drive.google_drive.gdrive_schemas import GoogleCredentialsToken
+from gdrive_pydantic_wrapper.google_drive.gdrive_schemas import GoogleCredentialsToken
 
 
 class DummyTokenObject(BaseModel):

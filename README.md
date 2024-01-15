@@ -16,7 +16,11 @@ Skeleton project created by Cookiecutter PyPackage
 * PyPI: <https://pypi.org/project/gdrive-pydantic-wrapper/>
 * Free software: MIT
 
+## Installation
 
+```shell
+poetry add gdrive_pydantic_wrapper
+```
 ## Features
 
 * TODO

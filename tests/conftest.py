@@ -13,3 +13,8 @@ def output_folder() -> Path:
 def fixtures_folder() -> Path:
     folder = Path(__file__).parent / 'fixtures'
     return folder
+
+
+@pytest.fixture(scope='session')
+def envs_folder() -> Path:
+    return Path(__file__).parent / '.envs'

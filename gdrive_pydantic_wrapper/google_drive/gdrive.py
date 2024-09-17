@@ -1,7 +1,4 @@
 import io
-from pathlib import Path
-from typing import Optional
-
 from google.auth.exceptions import RefreshError
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -9,7 +6,9 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
+from pathlib import Path
 from rich.pretty import pprint
+from typing import Optional
 
 from ..exceptions import UploadError
 from ..google_drive.gdrive_schemas import GoogleCredentialsToken
@@ -150,20 +149,21 @@ class GDrive:
         except HttpError as e:
             print(e)
 
+    def download_sheet_as_csv(self, sheet_id: str, filename: str, folder: Path) -> Path:
+        try:
+            # Construct the export URL for Google Sheets to CSV
+            request = self.service.files().export_media(fileId=sheet_id, mimeType='text/csv')
+            file = io.BytesIO()
+            downloader = MediaIoBaseDownload(file, request)
+            done = False
+            while not done:
+                status, done = downloader.next_chunk()
+                print(f'Download {int(status.progress() * 100)}%.')
 
-if __name__ == '__main__':
-    root_folder = Path(__file__).parent.parent.parent
-    sec_file = root_folder / '.envs' / 'luis.berrocal.1942-oauth.json'
-    if not sec_file.exists():
-        raise Exception(f'{sec_file} not found.')
-
-    gdrive = GDrive(secrets_file=sec_file)
-    fldr_id = '1nVh5_8SfU5a9wxGdgwyOkpNQC6tJ4qTF'
-    file_to_upload = root_folder / 'README.md'
-
-    gdrive.upload(file_to_upload, fldr_id)
-
-    results = gdrive.list_content(fldr_id)
-    for r in results:
-        pprint(r)
-        print('-' * 80)
+            # Save the downloaded content to a file
+            download_file = folder / filename
+            with open(download_file, 'wb') as binary_file:
+                binary_file.write(file.getvalue())
+            return download_file
+        except HttpError as e:
+            print(e)
